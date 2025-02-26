@@ -1,15 +1,320 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>🚧 Site Under Construction 🚧</h1>
-        <p>We're working hard to launch something amazing. Stay tuned!</p>
-    </div>
-</body>
-</html>
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #111;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+
+.heading-title {
+    font-size: 15rem; /* Adjust size as needed */
+    color: #000000;
+    transition: text-shadow 0.3s ease-in-out;
+    display: inline-block;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255); /* Thicker border */
+    opacity: 2; /* Slightly more visible */
+    letter-spacing: 15px; /* More spacing */
+    font-family: sans-serif;
+    text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.4),  /* Smaller glow */
+                 0 0 4px rgba(255, 255, 255, 0.3),  /* Reduced outer glow */
+                 0 0 6px rgba(255, 255, 255, 0.2);  /* Very soft glow */
+}
+.heading-title{
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    transform: translate(-50%, -50%); /* Centers the text */
+    width: max-content; /* Only take the necessary width */
+}
+
+
+.discript{
+    position: absolute;
+    top: 450px;
+    left: 668px;
+}
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.navbar.scrolled {
+    background: #222;
+    padding: 15px 50px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white; /* Default text color */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Change text to yellow on hover */
+    transform: scale(1.2); /* Slightly increase size */
+}
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.glow-container{
+    position:absolute;
+    top: 50px;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+
+.cta-button {
+    padding: 15px 40px;
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cta-button {
+     
+    position:absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.cta-button:hover {
+    background: #e6b800;
+}
+
+/* Events Section */
+.events {
+    padding: 100px 50px;
+    background: #222;
+    text-align: center;
+}
+
+.event-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.event-card1 {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.event-card1:hover {
+    transform: scale(1.05);
+    background: #ffcc00;
+    color: #000;
+}
+
+.event-card1 img {
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.event-card1 img {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;  /* Maintain aspect ratio */
+    max-width: none; /* Override previous max-width */
+}
+
+
+/* Image enlarges when hovered */
+.event-card1 img:hover {
+    transform: scale(1.75);
+}
+
+
+
+.event-card2 {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.event-card2:hover {
+    transform: scale(1.05);
+    background: #ffcc00;
+    color: #000;
+}
+
+.event-card2 img {
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Image enlarges when hovered */
+.event-card2 img:hover {
+    transform: scale(2.2);
+}
+
+.event-card3 {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.event-card3:hover {
+    transform: scale(1.05);
+    background: #ffcc00;
+    color: #000;
+}
+
+.event-card3 img {
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Image enlarges when hovered */
+.event-card3 img:hover {
+    transform: scale(2.2);
+}
+.section-title1 {
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    color: #ffcc00;
+}
+
+.section-title2 {
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    color: #ffcc00;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 100px 50px;
+    text-align: center;
+    background: #111;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sponsors Section */
+
+.section-title3 {
+    margin-bottom: 50px;
+    font-size: 3rem;
+    color: #ffcc00;
+}
+
+.map {
+    padding: 100px 50px;
+    text-align: center;
+    background: #111;
+}
+
+.map-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.map-grid img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.sponsors {
+    padding: 100px 50px;
+    text-align: center;
+    background: #222;
+}
+
+.sponsor-logos img {
+    width: 150px;
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #ffcc00;
+}
+
