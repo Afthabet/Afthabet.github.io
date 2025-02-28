@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Make event cards clickable with respective pages
     const eventMappings = {
+        '#eventImage1': 'workshop.html',
+        '#eventImage2': 'autoshow.html',
+        '#eventImage3': 'proshow.html',
         '.event-card1': 'workshop.html',
         '.event-card2': 'autoshow.html',
         '.event-card3': 'proshow.html'
