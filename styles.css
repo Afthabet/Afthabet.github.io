@@ -94,13 +94,13 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 0.3rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgba(0, 0, 0, 0.8);
     z-index: 1000;
-    transition: 0.3s;
+    transition: top 0.3s ease-in-out; /* Smooth transition for hiding/showing */
 }
 
 .navbar.scrolled {
@@ -109,7 +109,7 @@ html {
 }
 
 .logo {
-    font-size: 5rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #ffcc00;
     text-transform: uppercase;
@@ -227,20 +227,29 @@ html {
     text-align: center;
 }
 
-/* Hover Effect for Cards */
-.event-card:hover {
-    transform: scale(1.05);
-    background: #ffcc00;
-    color: #000;
+/* Event Cards */
+.event-card1, .event-card2, .event-card3 {
+    background: #333;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Hover effect class that will be added when element is in viewport */
+.hover-effect {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 204, 0, 0.2);
 }
 
 /* Event Card 1 */
-.event-card1 {
-    background: #333;
-}
-
 .event-card1:hover {
     background: #ffcc00;
+    color: #000;
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 204, 0, 0.3);
 }
 
 .event-card1 img {
@@ -256,12 +265,11 @@ html {
 }
 
 /* Event Card 2 */
-.event-card2 {
-    background: #333;
-}
-
 .event-card2:hover {
     background: #ffcc00;
+    color: #000;
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 204, 0, 0.3);
 }
 
 .event-card2 img {
@@ -277,12 +285,11 @@ html {
 }
 
 /* Event Card 3 */
-.event-card3 {
-    background: #333;
-}
-
 .event-card3:hover {
     background: #ffcc00;
+    color: #000;
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 204, 0, 0.3);
 }
 
 .event-card3 img {
@@ -302,8 +309,6 @@ html {
 .event-card3 h3 {
     margin-top: 20px; /* Moves the heading down */
 }
-
-
 
 .section-title1, .section-title2, .section-title3 {
     margin-bottom: 2rem;
@@ -379,4 +384,3 @@ footer {
     background: #111;
     color: #ffcc00;
 }
-
